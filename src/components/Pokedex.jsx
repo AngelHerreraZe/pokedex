@@ -15,6 +15,7 @@ const Pokedex = () => {
     const [types, setTypes] = useState([]);
     const navigate = useNavigate();
 
+
     const [page, setPage] = useState(1);
     const pokemonsPerPage = 20;
     const lastIndex = page * pokemonsPerPage;
@@ -45,7 +46,9 @@ const Pokedex = () => {
 
         axios
             .get('https://pokeapi.co/api/v2/type/')
-            .then(res => setTypes(res.data.results))
+            .then(res => {setTypes(res.data.results)})
+
+        
     },[])
 
     const search = () => {
@@ -123,6 +126,7 @@ const Pokedex = () => {
                     ))}
                     </select>
                 </div>
+
                 <div className='pokedex-cards'>
                 {
                 pokemonsPaginated.map(pokemon => (
