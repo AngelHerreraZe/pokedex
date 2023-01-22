@@ -53,7 +53,11 @@ const Pokedex = () => {
     }
 
     const filterType = (e) => {
-        axios.get(`https://pokeapi.co/api/v2/type/${e.target.value}`).then((res) => setPokemons(res.data.pokemon));
+        // axios.get(`https://pokeapi.co/api/v2/type/${e.target.value}`).then((res) => setPokemons(res.data.pokemon));
+
+        axios.get(e.target.value)
+        .then(res => setPokemons(res.data.pokemon));
+
       };
     
     const pagination = () => {
@@ -105,19 +109,27 @@ const Pokedex = () => {
                     value={inputSearch}
                     onChange={e => setInputSearch(e.target.value)}/>
                     <button className='search-button' onClick={search}>Search</button>
+
                     <select className='search-select' onChange={filterType} name="" id="">
-                        <option value="" disabled selected> Todos los tipos</option>
-                    {types.map((type) => (
-                        <option value={type.name} key={type.url}>
+                        <option value=""  > Todos los tipos</option>
+                    {
+
+                        types.map((type) => (
+                        <option value={type.url} key={type.url}>
                         {type.name}
                         </option>
+
+
                     ))}
                     </select>
                 </div>
                 <div className='pokedex-cards'>
                 {
                 pokemonsPaginated.map(pokemon => (
-                        <PokemonCard key={pokemon.url} url={pokemon.url}/>
+                        <PokemonCard 
+                        key={pokemon.url ? pokemon.url : pokemon.pokemon.url} 
+                        url={pokemon.url ? pokemon.url : pokemon.pokemon.url}
+                        />
                 ))}
                 </div>
                 {pagination()}
