@@ -15,11 +15,11 @@ const PokemonCard = ({url}) => {
             .then(res => setPokemon(res.data))
     },[])
 
-    console.log(pokemon);
+    // console.log(pokemon);
 
     return (
         <div className='pokemon-card' onClick={() => navigate(`/pokemon/${pokemon.id}`)}>
-                <img className='pokemon-card-img' src={pokemon.sprites?.front_shiny} alt="" />
+                <img className='pokemon-card-img' src={pokemon.sprites?.other.dream_world.front_default} alt="" />
                 <p className='pokemon-card-name'>{pokemon.name}</p>
                 <p>{pokemon.types?.name}</p>
                 <div className='stats'>

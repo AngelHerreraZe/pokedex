@@ -10,6 +10,8 @@ const PokedexDetail = () => {
     const { id } = useParams();
     const [pokemon,setPokemon] = useState({});
     const navigate = useNavigate();
+    
+    // console.log(pokemon);
 
     useEffect(()=>{
         axios
@@ -22,7 +24,7 @@ const PokedexDetail = () => {
         <div>
             <h1>Pokedex detail</h1>
             <h1>{pokemon.name}</h1>
-            <img src={pokemon.sprites?.front_shiny} alt="" />
+            <img src={pokemon.sprites?.other.dream_world.front_default} alt="" /> */}
         </div>
     );
 };
