@@ -10,9 +10,9 @@ const NotFound = () => {
     }
 
     return (
-        <div>
-            <h1>El pokemon que ingresaste no existe</h1>
-            <button onClick={back}>Regresar</button>
+        <div className='error-screen'>
+            <h1>ups algo salió mal. intentalo de nuevo...</h1>
+            <button className='error-text' onClick={back}>Regresar</button>
         </div>
     );
 };

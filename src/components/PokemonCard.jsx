@@ -9,29 +9,28 @@ const PokemonCard = ({url}) => {
     const [pokemon,setPokemon] =useState({});
     const navigate = useNavigate();
     const [color, setColor] = useState({});
+    const randomColor = Math.floor(Math.random() * 7) + 1
+    const [index, setIndex] = useState(randomColor)
 
-
+    const getColor = () => {
+        if (randomColor !== 8) {
+            setIndex(randomColor);
+        }
+    }
 
     useEffect(()=>{
+        getColor();
         axios
             .get(url)
             .then(res => {setPokemon(res.data)})
-
             axios
-            .get(`https://pokeapi.co/api/v2/pokemon-color/5`)
+            .get(`https://pokeapi.co/api/v2/pokemon-color/${index}`)
             .then(res => setColor(res.data));
             
     },[]);
 
-    
-
-        
-
-
-    // console.log(url);
-
     return (
-        <div className='pokemon-card' style={{background: color.name}} onClick={() => navigate(`/pokemon/${pokemon.id}`)}>
+        <div className='pokemon-card' style={{background: color.name}} onClick={() => navigate(`/pokedex/${pokemon.id}`)}>
                 <p className='pokemon-card-id'>#{pokemon.id}</p>
                 <img className='pokemon-card-img' src={pokemon.sprites?.other.dream_world.front_default} alt="" />
                 

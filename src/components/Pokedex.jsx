@@ -52,12 +52,10 @@ const Pokedex = () => {
     },[])
 
     const search = () => {
-        navigate(`/pokemon/${inputSearch.toLowerCase()}`)
+        navigate(`/pokedex/${inputSearch.toLowerCase()}`)
     }
 
     const filterType = (e) => {
-        // axios.get(`https://pokeapi.co/api/v2/type/${e.target.value}`).then((res) => setPokemons(res.data.pokemon));
-
         axios.get(e.target.value)
         .then(res => setPokemons(res.data.pokemon));
 
