@@ -32,6 +32,7 @@ const PokemonCard = ({url}) => {
 
     return (
         <div className='pokemon-card' style={{background: color.name}} onClick={() => navigate(`/pokemon/${pokemon.id}`)}>
+                <p className='pokemon-card-id'>#{pokemon.id}</p>
                 <img className='pokemon-card-img' src={pokemon.sprites?.other.dream_world.front_default} alt="" />
                 
                 <div className='pokemon-box'>

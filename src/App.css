@@ -242,12 +242,21 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    position: relative;
     width: 261px;
     height: 383px;
     border-radius: 20px;
     padding: 10px;
     box-shadow: 10px 10px 10px #9F9F9F;
     /* background-color: green; */
+}
+
+.pokemon-card-id{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 15px;
+    color: white;
 }
 
 .pokemon-card-img{

@@ -104,7 +104,7 @@ const Pokedex = () => {
                 <div className='input-name-pokedex-circle-mid'></div>
             </div>
             <div className='pokedex-body'>
-                <p className='pokedex-title'>Welcome {userName}, <span className='pokedex-subtitle'>Aqui podras encontrar tu pokemón favorito</span></p>
+                <p className='pokedex-title'>Bienvenido {userName}, <span className='pokedex-subtitle'>Aqui podras encontrar tu Pokemón favorito</span></p>
                 <div>
                     <input type="text"
                     className='search-input' 
