@@ -28,7 +28,7 @@ const PokemonCard = ({url}) => {
         
 
 
-    console.log(url);
+    // console.log(url);
 
     return (
         <div className='pokemon-card' style={{background: color.name}} onClick={() => navigate(`/pokemon/${pokemon.id}`)}>

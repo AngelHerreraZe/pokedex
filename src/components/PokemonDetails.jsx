@@ -20,11 +20,47 @@ const PokedexDetail = () => {
             .catch(() => navigate("/notFound"))
     },[])
 
+    console.log(pokemon);
+
     return (
         <div>
-            <h1>Pokedex detail</h1>
-            <h1>{pokemon.name}</h1>
-            <img src={pokemon.sprites?.other.dream_world.front_default} alt="" />
+            <section className='details'>
+
+                <div className='details-nav'>
+                    <p>Pokedex</p>
+                </div>
+
+                <h1 className="details-title">{pokemon.name}</h1>
+                <p className="details-subtitle"></p>
+
+                <div className="details-box">
+
+                    <div className="details-box-content">
+
+                        <h1>Id: #{pokemon.id}</h1>
+                        <h1>Height: {pokemon.height} m</h1>
+                        <h1>Weight: {pokemon.weight} kg</h1>
+                        <h1>Abilities: {pokemon.abilities?.[0].ability.name} <br />{pokemon.abilities?.[1].ability.name}</h1>
+                        <h1>Type: {pokemon.types?.[0].type.name} {pokemon.types?.[1].type.name} </h1> 
+                        <h1>Forms: {pokemon.forms?.[0].name}</h1>
+
+
+                    </div>
+                    <div className="detail-box-image">
+
+                        <img className="detail-img" src={pokemon.sprites?.other.dream_world.front_default} alt={pokemon.name} />
+                    </div>
+
+                    <div className="detail-box-bars">
+
+                        <h1>Pokedex detail</h1>
+
+                    </div>
+                </div>
+                
+              
+            </section>
+            
         </div>
     );
 };
