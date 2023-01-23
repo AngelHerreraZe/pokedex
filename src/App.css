@@ -270,7 +270,8 @@
 .search-input{
     width: 20rem;
     height: 3.125rem;
-    box-shadow: 0 5px 5px  grey;
+    border-radius:  15px 0 0 15px ;
+    box-shadow: 15px 15px 15px rgba(128, 128, 128, 0.397);   
 
 }
 
@@ -280,8 +281,9 @@
     background-color: #D93F3F;
     color: white;
     border: none;
-    box-shadow: 0 5px 5px  grey;
     font-size: 18px;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 15px 15px 15px rgba(128, 128, 128, 0.397);   
 }
 
 .search-select{
@@ -302,6 +304,42 @@
     grid-template-columns: repeat(4, 1fr);
     row-gap: 2rem;
     grid-auto-columns: minmax(10px, auto);
+}
+
+@media screen and (min-width: 320px){
+    .search-input {
+        width: 14rem;
+    }
+    .search-button {
+        width: 5rem;
+    }
+}
+
+@media screen and (max-width: 526px){
+    .search-select{
+        max-width: 10rem !important;
+        font-size: 17px;
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 624px){
+    .pokedex-cards{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+
+
+@media screen and (max-width: 956px){
+    .pokedex-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 1276px){
+    .pokedex-cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .pokemon-card{
