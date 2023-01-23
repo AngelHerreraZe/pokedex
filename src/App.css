@@ -346,11 +346,6 @@
     border-radius: 4px;
     background-image: radial-gradient(circle at 50% -20.71%, #cfa8ff 0, #9d8bff 25%, #6c6cd8 50%, #3f4ea4 75%, #153375 100%);
 }
-
-.pokemon-details-body{
-
-}
-
 .error-screen{
     width: 100vw;
     height: 100vh;
@@ -431,4 +426,123 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.pokemon-detail-id{
+    width: 78px;
+    height: 54px;
+    border: 1px solid #D3D3D3;
+    border-radius: 2px;
+    color: #416460;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    margin: 1rem;
+}
+
+.pokemon-detail-name{
+    color: #416460;
+    font-weight: 500;
+    font-size: 45px;
+    position: relative;
+}
+
+.pokemon-detail-name::before{
+    position: absolute;
+    content: "";
+    left: -26vw;
+    top: 50%;
+    width: 25vw;
+    border: 1px solid #9F9F9F;
+}
+
+.pokemon-detail-name::after{
+    position: absolute;
+    content: "";
+    right: -26vw;
+    top: 50%;
+    width: 25vw;
+    border: 1px solid #9F9F9F;
+    margin-bottom: 1rem;
+}
+
+.pokemon-detail-basic-stats{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.basic-stats-title{
+    color: #0F0F2D;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.basic-stats-stat{
+    font-weight: 500;
+    font-size: 25px;
+    color: #0F0F2D;
+}
+
+.pokemon-type-skills{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #302F2F;
+    margin: 1rem;
+}
+
+.pokemon-type-skills-texts{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+.type-1{
+    width: 10rem;
+    height: 2rem;
+    background: #85C9C5;
+    border-radius: 2px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.type-2{
+    width: 10rem;
+    height: 2rem;
+    background: #6C3D9A;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.ability{
+    width: 10rem;
+    height: 2rem;
+    border: 1px solid #D3D3D3;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 25px;
+    color: #302F2F;
+    text-align: center;
+}
+
+.stats-text-title{
+    padding: 2rem 0;
+    font-weight: 500;
+    font-size: 45px;
+    color: #302F2F;
+    width: 80%;
 }
