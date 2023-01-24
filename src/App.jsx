@@ -5,8 +5,6 @@ import Pokedex from './components/Pokedex'
 import PokedexDetails from './components/PokedexDetails'
 import ProtectedRoutes from './components/ProtectedRoutes'
 import NotFound from './components/NotFound'
-import { useState } from 'react'
-import { useEffect } from 'react'
 
 function App() {
   return (

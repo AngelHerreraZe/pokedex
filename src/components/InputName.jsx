@@ -16,6 +16,7 @@ const InputName = () => {
     }
 
     return (
+         
         <div className='input-name'>
             <img src={icon} alt="Pokedex icon" className='icon'/>
             <p className='input-name-title'>!Hola entrenador!</p>
